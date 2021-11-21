@@ -1,0 +1,10 @@
+version: "2.3"
+
+services:
+  quarkus-service:
+    build:
+      context: .
+      dockerfile: src/main/docker/Dockerfile.jvm
+    image: quarkus/exercise2-quarkus-jvm:jvm
+    ports:
+      - "8080:8080"  # the HTTP endpoint
